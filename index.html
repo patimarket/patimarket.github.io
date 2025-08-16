@@ -24,15 +24,14 @@
     .tag{background:rgba(255,255,255,.15);padding:6px 10px;border-radius:999px;font-size:12px}
     .hero{margin-top:18px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
     .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.06)}
-    /* Tüm .hero .card'lar için ortak stil */
-    .hero .card {
+    /* Sol taraftaki kartın arka planını kaldırıp yazıyı beyaz yaptık */
+    .hero .card:first-of-type {
       background: none;
       box-shadow: none;
-      color: #fff;
     }
     .hero h1{margin:0 0 8px;font-size:28px}
     .hero p{margin:0;color:#f9f9f9;opacity:.95}
-    .stat{display:flex;align-items:center;gap:10px;color:#fff;opacity:.9}
+    .stat{display:flex;align-items:center;gap:10px;color:var(--ink);opacity:.9}
     .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:22px 0 40px}
     @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)} .hero{grid-template-columns:1fr}}
     @media (max-width:560px){.grid{grid-template-columns:1fr}}
@@ -87,7 +86,10 @@
           <p class="mini" style="margin-top:10px">Sepet yok; “Satın Al” ile hızlı form doldurup sipariş veriyorsun.</p>
         </div>
         <div class="card">
-          <div class="stat">Hayvanlara yardım edin, iyilik sizinle olsun!</div>
+          <div class="stat">✅ Güvenli form · ✉️ E-posta bildirimi · 🚚 Adres bilgisini siparişte alıyoruz</div>
+          <div class="notice" style="margin-top:12px">
+            Hayvanlara yardım edin, iyilik sizinle olsun!
+          </div>
         </div>
       </div>
     </div>
